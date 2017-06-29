@@ -17,6 +17,7 @@ import ua.service.CompanyService;
 import ua.service.implementation.editor.CompanyEditor;
 
 @Controller
+@RequestMapping("/")
 public class IndexController {
 
 	@Autowired
@@ -51,5 +52,11 @@ public class IndexController {
 		model.addAttribute("company",service.findOne(id));
 		model.addAttribute("companies", service.findAll());
 		return "index";
+	}
+	
+	@RequestMapping("/delete/{id}")
+	public String delete(@PathVariable int id){
+		service.delete(id);
+		return "redirect:/";
 	}
 }

@@ -6,6 +6,8 @@ import ua.entity.Company;
 
 public interface CompanyService {
 	
+	void delete (int id);
+	
 	void save(Company company);
 	
 	Company findOne(int id);

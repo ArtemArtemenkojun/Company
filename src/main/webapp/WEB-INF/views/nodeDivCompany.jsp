@@ -9,7 +9,7 @@
     	<div class="col-md-3 col-xs-3" >All money ${companies.allmoney}</div>
     	<div class="col-md-3 col-xs-3">
     	    <a class="btn btn-warning" href="/update/${id}">update</a>
-    		<a class="btn btn-danger" href="/delete/${id}<custom:allParams/>">delete</a>
+    		<a class="btn btn-danger" href="/delete/${id}">delete</a>
     	</div>
     <jsp:include page="nodeDivCompany.jsp"/>
 </c:forEach>

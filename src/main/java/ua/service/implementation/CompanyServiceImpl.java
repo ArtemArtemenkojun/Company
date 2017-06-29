@@ -59,4 +59,9 @@ public class CompanyServiceImpl implements CompanyService{
 		return allMoney;
 	}
 
+	@Override
+	public void delete(int id) {
+		companyRepository.delete(id);
+	}
+
 }
