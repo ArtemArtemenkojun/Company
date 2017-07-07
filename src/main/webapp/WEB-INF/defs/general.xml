@@ -4,8 +4,8 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 				<!-- Some templates -->
-	<definition name="common" template="/WEB-INF/layout/classic.jsp">
-	</definition>
+	<definition name="common" template="/WEB-INF/layout/classic.jsp"> 
+	</definition> <!-- -->
 	
 	<definition name="index" extends="common">
 		<put-attribute name="title" value="index" />

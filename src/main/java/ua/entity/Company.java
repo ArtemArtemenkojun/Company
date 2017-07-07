@@ -1,5 +1,10 @@
 package ua.entity;
 
+
+
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
+
 
 @Entity
 public class Company {
@@ -29,6 +35,7 @@ public class Company {
 	@ManyToOne(fetch=FetchType.LAZY)
 	private Company parent;
 	@OneToMany(mappedBy="parent")
+	@Cascade({CascadeType.ALL})//REMOVE,SAVE_UPDATE, CascadeType.DELETE
 	private List<Company> childs = new ArrayList<>();
 	
 	public int getAllmoney() {

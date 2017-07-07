@@ -3,7 +3,7 @@
   <groupId>GorbickArtem</groupId>
   <artifactId>Company</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>war</packaging>  	
   <properties>
 		<springCoreVersion>4.3.1.RELEASE</springCoreVersion>
 		<springSecurityVersion>4.0.3.RELEASE</springSecurityVersion>

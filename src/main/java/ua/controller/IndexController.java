@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
 import ua.entity.Company;
 import ua.service.CompanyService;
 import ua.service.implementation.editor.CompanyEditor;
@@ -47,16 +48,18 @@ public class IndexController {
 		return "redirect:/";
 	}
 	
-	@RequestMapping("/update/{id}")
-	public String update(@PathVariable int id, Model model){
-		model.addAttribute("company",service.findOne(id));
-		model.addAttribute("companies", service.findAll());
-		return "index";
-	}
-	
-	@RequestMapping("/delete/{id}")
+	@RequestMapping("company/delete/{id}")
 	public String delete(@PathVariable int id){
 		service.delete(id);
 		return "redirect:/";
+	}
+	
+	@RequestMapping("company/update/{id}")
+	public String update(@PathVariable int id, Model model){
+		
+		model.addAttribute("company", service.findOne(id));
+		model.addAttribute("companies", service.findAll());
+		
+		return "index";
 	}
 }
